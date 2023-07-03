@@ -14,6 +14,22 @@ loadlibrary <- function(packagename)
   }
 }
 
+load_tspredit_internal <- function() {
+  if (!require("tspredit", character.only = TRUE))
+  {
+    library(devtools)
+    
+    devtools::install_github("cefet-rj-dal/tspredit", force=TRUE, upgrade="never")
+    
+    library(tspredit)
+  }
+}
+
+load_tspredit <- function()
+{
+  suppressPackageStartupMessages(load_tspredit_internal())
+}
+
 internal_load_harbinger <- function()
 {
   library(daltoolbox)
