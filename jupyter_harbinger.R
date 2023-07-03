@@ -5,19 +5,13 @@ setrepos <- function(repos=repos) {
   repos_name <<- repos
 }
 
-internal_loadlibrary <- function(packagename)
+loadlibrary <- function(packagename)
 {
   if (!require(packagename, character.only = TRUE))
   {
-    install.packages(packagename, repos=repos_name, dep=TRUE, verbose = FALSE)
+    suppressPackageStartupMessages(install.packages(packagename, repos=repos_name, dep=TRUE, verbose = FALSE))
     require(packagename, character.only = TRUE)
   }
-}
-
-
-loadlibrary <- function(packagename)
-{
-  suppressPackageStartupMessages(internal_loadlibrary(packagename))
 }
 
 internal_load_harbinger <- function()
@@ -28,7 +22,7 @@ internal_load_harbinger <- function()
   {
     library(devtools)
 
-    devtools::install_github("cefet-rj-dal/harbinger", force=TRUE, dependencies=FALSE, upgrade="never", build_vignettes = TRUE)
+    devtools::install_github("cefet-rj-dal/harbinger", force=TRUE, upgrade="never")
 
     library(harbinger)
   }
