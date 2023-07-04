@@ -22,8 +22,6 @@ load_github <- function(gitname)
     devtools::install_github(gitname, force=TRUE, upgrade="never", quiet = TRUE)
     require(packagename, character.only = TRUE)
   }
-  
-  suppressPackageStartupMessages(load_tspredit_internal())
 }
 
 
