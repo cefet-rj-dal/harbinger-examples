@@ -86,6 +86,10 @@ if (FALSE) { #build package for cran
   #R CMD check daltoolbox_1.0.77.tar.gz
   #R CMD check daltoolbox_1.0.77.tar.gz --as-cran
   
+  #R CMD check harbinger_1.0.57.tar.gz
+  #R CMD check harbinger_1.0.57.tar.gz --as-cran
+  
+  
   #upload package
   #https://cran.r-project.org/submit.html  
 }
