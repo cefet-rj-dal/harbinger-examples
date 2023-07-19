@@ -83,9 +83,6 @@ if (FALSE) { #build package for cran
   pkgbuild::build(manual = TRUE)
   
   #run in terminal
-  #R CMD check daltoolbox_1.0.77.tar.gz
-  #R CMD check daltoolbox_1.0.77.tar.gz --as-cran
-  
   #R CMD check harbinger_1.0.707.tar.gz
   #R CMD check harbinger_1.0.707.tar.gz --as-cran
   
