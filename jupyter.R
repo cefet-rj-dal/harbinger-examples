@@ -86,7 +86,6 @@ if (FALSE) { #build package for cran
   #R CMD check harbinger_1.0.737.tar.gz
   #R CMD check harbinger_1.0.737.tar.gz --as-cran
   
-  
   #upload package
   #https://cran.r-project.org/submit.html  
 }
